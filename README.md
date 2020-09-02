@@ -60,10 +60,15 @@ aws s3 ls s3://test-bucket \
 
 aws lambda list-functions \
   --endpoint-url=http://localhost:4574
+```
 
 ## Lambda発火
+```
 aws lambda invoke \
   --endpoint-url=http://localhost:4574 \
   --function-name s3-trigger-test \
   out --log-type Tail; rm out
 ```
+
+## 参考文献
+- https://future-architect.github.io/articles/20200722/
